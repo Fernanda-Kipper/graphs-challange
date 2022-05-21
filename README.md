@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Challenge - Calculando Distâncias no Grafo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Qual o desafio? 🧑🏻‍💻
 
-## Available Scripts
+Uma matriz de adjacência é uma das formas de se representar um grafo. Nesse caso trabalharemos com grafos que possuem arestas valoradas, ou seja, as arestas mostram a distância entre os vértices nos grafos (Imagem 1). 
+Através dos valores da matriz de adjacência fornecida (Imagem 2), **você deve calcular a menor distância entre dois vértices** solicitados pelo usuário.
 
-In the project directory, you can run:
+EX: Menor distância entre B e C
 
-### `npm start`
+<img width="400" alt="Imagem Grafo Valorado" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Prim_Algorithm_0.svg/250px-Prim_Algorithm_0.svg.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img width="400" alt="Matriz de Adjacência" src="./public/matrix.png">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> Considere as seguintes regras:
+- Se não tiver caminho disponível, retornar "Não existem caminhos"
+- Se for mesma origem e destino, retornar "0"
+- Caso contrário, retornar sempre a menor distância possível
+- Sinta-se livre para definir 
 
-### `npm test`
+> Se tiver dúvidas 
+- Veja como ficou o resultado final nos meus stories
+- Me chama na DM que posso ajudar! **@kipperdev**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Por onde começo? 💻
 
-### `npm run build`
+### Rodando a aplicação 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para rodar a aplicação é bem fácil, basta clonar esse repositório e rodar os seguintes comandos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+````bash
+npm install
+npm start
+````
 
-### `npm run eject`
+### Onde devo codar?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Busque pelos comentários *TODO* no código
+- Mexa no arquivo `calculateDistance.ts` para realizar os cálculos de distância
+- Mexa no arquivo `App.tsx`, na função `onSubmit` para ajustar parâmetros e chamadas da função
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Lembre-se! Não há apenas um jeito de resolver
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Terminei, e agora?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Acesse a branch **feat/solution** para visualizar a minha solução caso tenha curiosidade (disponível dia 22/05 as 19h)
+- Me envia a sua solução no meu instagram **@kipperdev**
+  - Podemos discutir sobre as abordagens, ou até testar ambas soluções em busca de bugs ;)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#BoraCodar🚀
