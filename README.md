@@ -15,7 +15,7 @@ EX: Menor distância entre B e C
 - Se não tiver caminho disponível, retornar "Não existem caminhos"
 - Se for mesma origem e destino, retornar "0"
 - Caso contrário, retornar sempre a menor distância possível
-- Sinta-se livre para definir 
+- Na matriz, onde contém o valor / significa que não há arestas ligando esses vértices
 
 > Se tiver dúvidas 
 - Veja como ficou o resultado final nos meus stories
