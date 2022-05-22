@@ -8,7 +8,7 @@ import './styles/app.css';
 import { calculateDistance } from './utils/calculateDistance';
 
 function App() {
-  const [result, setResult] = useState('')
+  const [result, setResult] = useState<string | null>()
   const firstSelect = useRef<HTMLSelectElement>(null)
   const secondSelect = useRef<HTMLSelectElement>(null)
 
@@ -20,12 +20,9 @@ function App() {
     const origin = firstSelect?.current?.value
     const destination = secondSelect?.current?.value
     if(!origin || !destination) return
-  
-    // TODO: chame a função e passe os parâmetros que você achar necessário para o cálculo
-    const result = calculateDistance(origin, destination)
 
-    //  TODO: descomente a próxima linha depois que finalizar:
-    // setResult(result)
+    const result = calculateDistance(origin, destination)
+    setResult(result)
   }
 
   useEffect(() => {
