@@ -10,11 +10,11 @@ export const calculateMinorDistance = (origin: string, destination: string, sum:
     if(checkIfVertexExists(origin)){
         let originEdges = DISTANCES[origin as Vertex]
         for(let edge of originEdges){
-            if(edge[0] == destination){
+            if(edge[0] === destination){
                 distanceResults.push(edge[1] as number + sum)
             }
-            else if(edge[0] != initialOrigin && !checkIfElementIsInArray(edgeAlreadyDeepIn, origin)){
-                edgeAlreadyDeepIn.push(origin)
+            else if(edge[0] !== initialOrigin && !checkIfElementIsInArray(edgeAlreadyDeepIn, edge[0])){
+                edgeAlreadyDeepIn = [...edgeAlreadyDeepIn, edge[0] as string]
                 calculateMinorDistance(edge[0] as string, destination, edge[1] as number + sum, initialOrigin, distanceResults, edgeAlreadyDeepIn)
             }
         }
