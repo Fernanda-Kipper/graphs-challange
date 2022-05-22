@@ -9,4 +9,4 @@ export const DISTANCES = {
 
 export const VERTICES = ['A', 'B', 'C', 'D','E', 'F']  as const;
 
-export type Vortex = typeof VERTICES[number];
+export type Vertex = typeof VERTICES[number];

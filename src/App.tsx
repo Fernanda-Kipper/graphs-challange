@@ -1,14 +1,14 @@
 import { FormEvent, useEffect, useRef, useState } from 'react';
 
 import { Select } from './components/select';
-import { DISTANCES, VERTICES, Vortex } from './constants/distances';
+import { DISTANCES, VERTICES, Vertex } from './constants/distances';
 import { updateTableValues } from './utils/table';
 
 import './styles/app.css';
 import { calculateDistance } from './utils/calculateDistance';
 
 function App() {
-  const [result, setResult] = useState('')
+  const [result, setResult] = useState<string | null>()
   const firstSelect = useRef<HTMLSelectElement>(null)
   const secondSelect = useRef<HTMLSelectElement>(null)
 
@@ -20,18 +20,15 @@ function App() {
     const origin = firstSelect?.current?.value
     const destination = secondSelect?.current?.value
     if(!origin || !destination) return
-  
-    // TODO: chame a função e passe os parâmetros que você achar necessário para o cálculo
-    const result = calculateDistance(origin, destination)
 
-    //  TODO: descomente a próxima linha depois que finalizar:
-    // setResult(result)
+    const result = calculateDistance(origin, destination)
+    setResult(result)
   }
 
   useEffect(() => {
-    Object.keys(DISTANCES).map(vortex => {
-      DISTANCES[vortex as Vortex].map(distance => {
-        updateTableValues(vortex,distance)
+    Object.keys(DISTANCES).map(vertex => {
+      DISTANCES[vertex as Vertex].map(distance => {
+        updateTableValues(vertex,distance)
       })
     })  
   },[])
@@ -43,7 +40,7 @@ function App() {
           <table className="table">
             <thead>
               <tr>
-                {VERTICES.map(vortex => <th key={vortex}>{vortex}</th>)}
+                {VERTICES.map(vertex => <th key={vertex}>{vertex}</th>)}
               </tr>
             </thead>
             <tbody id="table">
