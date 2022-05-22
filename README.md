@@ -1,25 +1,26 @@
-# Challenge - Calculando Distâncias no Grafo
-
+# JS Algorithm Challenge
 ## Qual o desafio? 🧑🏻‍💻
 
-Uma matriz de adjacência é uma das formas de se representar um grafo. Nesse caso trabalharemos com grafos que possuem arestas valoradas, ou seja, as arestas mostram a distância entre os vértices nos grafos (Imagem 1). 
-Através dos valores da matriz de adjacência fornecida (Imagem 2), **você deve calcular a menor distância entre dois vértices** solicitados pelo usuário.
+Baseado no [Algorítimo de Dijkstra](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm), nesse desafio **você deve calcular a menor distância entre dois vértices em um grafo** solicitados pelo usuário.
 
-EX: Menor distância entre B e C
+Existem dois tipos básicos de grafos, grafos não valorados onde as arestas conectam os vértices sem nenhum valor, e grafos valorados onde o valor contido nas arestas representam a distância dos vértices. Nesse caso trabalharemos com grafos que possuem arestas valoradas (Imagem 1). Uma matriz de adjacência é uma das formas de se representar um grafo, onde cada célula da matriz representa o valor da aresta que liga os dois vértices ou não (quando não há aresta conectando-os diretamente), ao iniciar essa aplicação você pode visualizar o grafo em forma de matriz.
 
-<img width="400" alt="Imagem Grafo Valorado" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Prim_Algorithm_0.svg/250px-Prim_Algorithm_0.svg.png">
+Perceba que em um grafo pode existir *nenhum ou N caminhos diferentes que ligam um vértice a outro*, e o seu algoritmo deverá retornar para o usuário a menor distância possível entre dois vértices.
 
-<img width="400" alt="Matriz de Adjacência" src="./public/matrix.png">
+Ex: Qual menor distância entre B e C?
+
+<p align="center"><img width="300" alt="Imagem Grafo Valorado" src="./public/graph-value.png"></p>
+
 
 > Considere as seguintes regras:
 - Se não tiver caminho disponível, retornar "Não existem caminhos"
 - Se for mesma origem e destino, retornar "0"
 - Caso contrário, retornar sempre a menor distância possível
-- Na matriz, onde contém o valor / significa que não há arestas ligando esses vértices
+- Na matriz, onde contém o valor / significa que não há arestas ligando esses vértices diretamente
 
 > Se tiver dúvidas 
-- Veja como ficou o resultado final nos meus stories
-- Me chama na DM que posso ajudar! **@kipperdev**
+- Me chama na DM que posso ajudar! [@kipperdev](https://www.instagram.com/kipper.dev/)
+- Veja meus destaques de [desafios](https://www.instagram.com/stories/highlights/17909793725446776/) no Instagram, lá expliquei como funciona certinho :)
 
 ## Por onde começo? 💻
 
@@ -33,6 +34,9 @@ npm install
 npm start
 ````
 
+- A aplicação está rodando na porta 3000
+`localhost:3000`
+
 ### Onde devo codar?
 
 - Busque pelos comentários *TODO* no código
@@ -43,7 +47,7 @@ npm start
 
 ## Terminei, e agora?
 
-- Acesse a branch **feat/solution** para visualizar a minha solução caso tenha curiosidade (disponível dia 22/05 as 19h)
+- Acesse a branch **feat/solution** para visualizar a minha solução caso tenha curiosidade
 - Me envia a sua solução no meu instagram **@kipperdev**
   - Podemos discutir sobre as abordagens, ou até testar ambas soluções em busca de bugs ;)
 
