@@ -29,4 +29,3 @@ export const calculateDistance = (origin: string, destination: string) => {
     if(!result.length) return "Não existem caminhos"
 
     return Math.min(...result).toString();
-}
