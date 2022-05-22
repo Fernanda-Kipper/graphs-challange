@@ -4,7 +4,7 @@ const checkIfElementIsInArray = (array: any[], element: any) => array.indexOf(el
 
 const checkIfVertexExists = (origin: string) => checkIfElementIsInArray(Object.keys(DISTANCES),origin)
 
-export const calculateMinorDistance = (origin: string, destination: string, sum: number, initialOrigin: string, distanceResults: number[] | null = null, edgeAlreadyDeepIn: string[] = []) => {
+export const calculateLeastDistance = (origin: string, destination: string, sum: number, initialOrigin: string, distanceResults: number[] | null = null, edgeAlreadyDeepIn: string[] = []) => {
     if(distanceResults === null) distanceResults = []
 
     if(checkIfVertexExists(origin)){
@@ -15,7 +15,7 @@ export const calculateMinorDistance = (origin: string, destination: string, sum:
             }
             else if(edge[0] !== initialOrigin && !checkIfElementIsInArray(edgeAlreadyDeepIn, edge[0])){
                 edgeAlreadyDeepIn = [...edgeAlreadyDeepIn, edge[0] as string]
-                calculateMinorDistance(edge[0] as string, destination, edge[1] as number + sum, initialOrigin, distanceResults, edgeAlreadyDeepIn)
+                calculateLeastDistance(edge[0] as string, destination, edge[1] as number + sum, initialOrigin, distanceResults, edgeAlreadyDeepIn)
             }
         }
     }
@@ -25,7 +25,7 @@ export const calculateMinorDistance = (origin: string, destination: string, sum:
 export const calculateDistance = (origin: string, destination: string) => {
     if(origin === destination) return "0"
 
-    const result = calculateMinorDistance(origin, destination, 0, origin)
+    const result = calculateLeastDistance(origin, destination, 0, origin)
     if(!result.length) return "Não existem caminhos"
 
     return Math.min(...result).toString();
