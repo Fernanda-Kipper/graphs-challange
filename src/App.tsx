@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useRef, useState } from 'react';
 
 import { Select } from './components/select';
-import { DISTANCES, VERTICES, Vortex } from './constants/distances';
+import { DISTANCES, VERTICES, Vertex } from './constants/distances';
 import { updateTableValues } from './utils/table';
 
 import './styles/app.css';
@@ -29,9 +29,9 @@ function App() {
   }
 
   useEffect(() => {
-    Object.keys(DISTANCES).map(vortex => {
-      DISTANCES[vortex as Vortex].map(distance => {
-        updateTableValues(vortex,distance)
+    Object.keys(DISTANCES).map(vertex => {
+      DISTANCES[vertex as Vertex].map(distance => {
+        updateTableValues(vertex,distance)
       })
     })  
   },[])
@@ -43,7 +43,7 @@ function App() {
           <table className="table">
             <thead>
               <tr>
-                {VERTICES.map(vortex => <th key={vortex}>{vortex}</th>)}
+                {VERTICES.map(vertex => <th key={vertex}>{vertex}</th>)}
               </tr>
             </thead>
             <tbody id="table">
