@@ -48,7 +48,7 @@ npm start
 ## Terminei, e agora?
 
 - Acesse a branch **feat/solution** para visualizar a minha solução caso tenha curiosidade
-- Me envia a sua solução no meu instagram **@kipperdev**
+- Me envia a sua solução no meu instagram  **[@kipper.dev](https://www.instagram.com/kipper.dev/)**
   - Podemos discutir sobre as abordagens, ou até testar ambas soluções em busca de bugs ;)
 
 #BoraCodar🚀
